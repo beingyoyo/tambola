@@ -1,2 +1,10 @@
 {% extends 'base.html' %}
-<h2>Hi<h2>
+{% load static %}
+{% block content %}
+   <div class="p-3 mb-2 bg-success text-white text-center">
+       {% for i in ticket_array %}
+            {{i}}
+            <br>
+        {% endfor %}
+   </div>
+{% endblock  %}
