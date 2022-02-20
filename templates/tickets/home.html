@@ -1,44 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-   <div class="p-3 mb-2 bg-success text-white text-center">
-       
-       <table class="table table-bordered table-dark">
-                <tr>
-                    <td>{{ticket_array.0.0}}</td>
-                    <td>{{ticket_array.0.1}}</td>
-                    <td>{{ticket_array.0.2}}</td>
-                    <td>{{ticket_array.0.3}}</td>
-                    <td>{{ticket_array.0.4}}</td>
-                    <td>{{ticket_array.0.5}}</td>
-                    <td>{{ticket_array.0.6}}</td>
-                    <td>{{ticket_array.0.7}}</td>
-                    <td>{{ticket_array.0.8}}</td>
-                </tr>
-
-                <tr>
-                    <td>{{ticket_array.1.0}}</td>
-                    <td>{{ticket_array.1.1}}</td>
-                    <td>{{ticket_array.1.2}}</td>
-                    <td>{{ticket_array.1.3}}</td>
-                    <td>{{ticket_array.1.4}}</td>
-                    <td>{{ticket_array.1.5}}</td>
-                    <td>{{ticket_array.1.6}}</td>
-                    <td>{{ticket_array.1.7}}</td>
-                    <td>{{ticket_array.1.8}}</td>
-                </tr>
-
-                <tr>
-                    <td>{{ticket_array.2.0}}</td>
-                    <td>{{ticket_array.2.1}}</td>
-                    <td>{{ticket_array.2.2}}</td>
-                    <td>{{ticket_array.2.3}}</td>
-                    <td>{{ticket_array.2.4}}</td>
-                    <td>{{ticket_array.2.5}}</td>
-                    <td>{{ticket_array.2.6}}</td>
-                    <td>{{ticket_array.2.7}}</td>
-                    <td>{{ticket_array.2.8}}</td>
-                </tr>
-       </table>
-   </div>
+<div>
+    <a href="{% url 'ticket' %}"><input type="submit">Ticket</input></a>
+</div>
 {% endblock  %}
