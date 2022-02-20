@@ -1,13 +1,26 @@
 import random
 from django.shortcuts import render
 import numpy as np
-from tabulate import tabulate
+#from tabulate import tabulate
 # Create your views here.
+numbers_generated = []
+
 def home(request):
     return render(request, 'tickets/home.html')
 
-def admin(request):
-    return render(request, 'tickets/admin.html')
+def number_generator(request):
+    
+    randomNumber = random.randint(1, 90)
+    if randomNumber in numbers_generated:
+        randomNumber = random.randint(1, 90)
+        numbers_generated.append(randomNumber)
+    else:
+        numbers_generated.append(randomNumber)
+    context = {
+        'numbers_generated' : numbers_generated,
+        'randomNumber' : randomNumber
+    }
+    return render(request, 'tickets/number_generator.html', context=context)
 
 def ticket(request):
     ticket_array = np.zeros((3, 9), dtype=int)
