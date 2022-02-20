@@ -4,6 +4,8 @@ import numpy as np
 from tabulate import tabulate
 # Create your views here.
 def home(request):
+    return render(request, 'tickets/home.html')
+def ticket(request):
     ticket_array = np.zeros((3, 9), dtype=int)
     #print(ticket_array)
     total_numbers = [num for num in range(1, 90)]
@@ -102,4 +104,4 @@ def home(request):
         'rowrange' : [0,1,2],
         'columnrange' : [0,1,2,3,4,5,6,7,8]
     }
-    return render(request, 'tickets/home.html', context)
+    return render(request, 'tickets/ticket.html', context)
