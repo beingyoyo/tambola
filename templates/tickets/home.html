@@ -1,7 +1,9 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-<div>
-    <a href="{% url 'ticket' %}"><input type="submit">Ticket</input></a>
+<div class="container-fluid">
+    <div class="p-3 mb-2 text-white text-center">
+        <a href="{% url 'ticket' %}"><input type="submit" value="Ticket"></input></a>
+    </div>
 </div>
 {% endblock  %}
