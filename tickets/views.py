@@ -5,6 +5,10 @@ from tabulate import tabulate
 # Create your views here.
 def home(request):
     return render(request, 'tickets/home.html')
+
+def admin(request):
+    return render(request, 'tickets/admin.html')
+
 def ticket(request):
     ticket_array = np.zeros((3, 9), dtype=int)
     #print(ticket_array)
@@ -97,7 +101,7 @@ def ticket(request):
                 ticket_array[2][col] = temp
 
 
-    print(tabulate(ticket_array, tablefmt="fancy_grid", numalign="center"))
+    #print(tabulate(ticket_array, tablefmt="fancy_grid", numalign="center"))
     context = {
         'ticket_array' : ticket_array,
         'total_indices' : total_indices,
