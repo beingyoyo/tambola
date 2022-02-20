@@ -1,17 +1,30 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
+<style>
+    .the-class {
+        background-color: green;
+      }
+      h1{
+        font-size: 30px;
+        color: black;
+        text-transform: uppercase;
+        font-weight: 300;
+        text-align: center;
+        margin-bottom: 15px;
+      }
+</style>
 <script>   
-    function changeColor(elem) {
-                //var cell = document.getElementById(id);
-                elem.style.backgroundColor = "green"; //cell.style.color = black;
-    }  
+    function changeColor() {
+        document.getElementById('td').classList.toggle("the-class");
+      }
 </script>
 <div class="container-fluid">
    <div class="p-3 mb-2 text-white text-center">
+       <h1>Ticket</h1>
        <table class="table table-bordered ">
                 <tr>
-                    <td onclick="changeColor(this)">{{ticket_array.0.0}}</td>
+                    <td onclick="changeColor()" id="td">{{ticket_array.0.0}}</td>
                     <td onclick="changeColor(this)">{{ticket_array.0.1}}</td>
                     <td onclick="changeColor(this)">{{ticket_array.0.2}}</td>
                     <td onclick="changeColor(this)">{{ticket_array.0.3}}</td>
