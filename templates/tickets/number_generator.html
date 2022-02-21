@@ -3,8 +3,11 @@
 {% block content %}
     <div class="container-fluid">
         <div class="p-3 mb-2 text-black text-center">
-            <p>{{numbers_generated}}</p>
-            <h1>{{randomNumber}}</h1>
+            {% for number in numbers_generated %}
+                <span class="badge rounded-pill bg-dark text-light"><h1 class="display-5">{{number}}</h1></span>
+            {% endfor %}
+            <br>
+            <h1 class="display-1">{{randomNumber}}</h1>
         </div>
     </div>
 {% endblock %}
